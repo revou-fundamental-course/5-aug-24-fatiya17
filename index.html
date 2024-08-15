@@ -1,74 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Project</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <h1 class="main-title">Kalkulator BMI</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Project</title>
 
-    <!-- Isi Content -->
-    <main>
-      <aside>
-        <!-- Article -->
-        <article>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste amet
-            minima perferendis quam odit neque in fuga? Dolore at, recusandae,
-            tempora a nostrum earum delectus quos aut, quibusdam accusantium
-            molestias.
-          </p>
-        </article>
+  <!----------------- Style CSS ------------------>
+  <link rel="stylesheet" href="css/style.css" />
 
-        <!-- Form -->
-        <form action="">
-          <div>
-            <h3>Jenis Kelamin</h3>
-            <input type="radio" id="laki-laki" name="laki-laki" />
-            <label for="jeniskelamin">Laki-laki</label>
-            <input type="radio" id="perempuan" name="perempuan" />
-            <label for="jeniskelamin">Perempuan</label>
+  <!----------------- Script JS ------------------>
+  <script src="js/script.js"></script>
+
+  <!----------------- Script Icons ------------------>
+  <script src="https://unpkg.com/feather-icons"></script>
+  
+</head>
+
+<body>
+  <!--------------------- Header ------------------------>
+  <header>
+    <h1 class="main-title">Kalkulator BMI</h1>
+  </header>
+
+  <!---------------------- Isi Content --------------------->
+  <main>
+    <aside class="kiri">
+      <!-- Article -->
+      <article class="kiri">
+        <p class="card" id="home">
+
+          <span class="span-p">Indeks Massa Tubuh (BMI) </span>adalah ukuran yang digunakan untuk menilai apakah berat badan Anda sehat sesuai
+            dengan tinggi badan Anda.
+            Dengan menghitung BMI, Anda bisa mengetahui apakah Anda berada dalam kategori berat badan ideal, kurang, atau
+            berlebih.
+        </p>
+        <div class="card" id="petunjuk">
+          <span class="span-p">Petunjuk Penggunaan:</span>
+          <br>
+          <ol>
+            <li class="card-petunjuk">Baca dan pahami informasi terkait hasil BMI pada 'Form Informasi'</li>
+            <br>
+          <li class="card-petunjuk">Masukkan Data: Isi tinggi badan dan berat badan Anda pada kolom yang tersedia, lalu klik tombol 'Hitung'.
+          hasilnya.</li>
+          <br>
+          <li class="card-petunjuk">Perhitungan BMI: BMI Anda dihitung dengan membagi berat badan (dalam kilogram) dengan kuadrat tinggi badan (dalam meter).</li>
+          <br>
+          <li class="card-petunjuk">Lihat Hasil: Hasil BMI Anda akan ditampilkan pada card di bagian berikutnya.
+
+          </li>
+        </ol>
+        </div>
+      </article>
+
+      <!------------------ Start Form BMI ---------------------->
+      <form action="" id="hitung-bmi">
+        <div>
+          <label for="jeniskelamin">Jenis Kelamin</label>
+                <select id="jeniskelamin" required>
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+
+        </div>
+
+        <div class="form-btn-container">
+          <label for="usia">Usia</label>
+          <input type="number" id="usia" placeholder="masukan usia anda" required/>
+        </div>
+
+        <div class="form-btn-container">
+          <label for="beratbadan">Berat Badan</label>
+          <input type="number" id="beratbadan" placeholder="masukan berat badan anda" required/>
+        </div>
+
+        <div class="form-btn-container">
+          <label for="tinggibadan">Tinggi Badan</label>
+          <input type="number" id="tinggibadan" placeholder="masukan tinggi badan anda" required/>
+        </div>
+        <br />
+        <div class="button">
+          <button class="hitung" type="button" onclick="hitungBMI()">SUBMIT</button>
+          <button class="reset" id="reset" onclick="resetForm()">Reset</button>
+        </div>
+      </form>
+      <!----------------- End Form BMI ------------------>
+
+    </aside>
+
+    <!---------------- Section Kanan Hasil ---------------->
+    <aside class="kanan">
+      <section class="hasil">
+        <h2 id="hasil-bmi">Hasil BMI</h2>
+
+        <div class="card card-hasil">
+          <h3 class="kategori">Berat badan anda <span id="kategori"></span></h3>
+          <div id="hasil" class="hasil">
+            <h1 id="bmi-hasil">00.00</h1>
+            <div class="deskripsi"></div>
+            <p class="deskripsi2" id="bmi-gender"></p>
+            <p class="deskripsi2" id="bmi-deskripsi"></p>
           </div>
+        </div>
+      </section>
 
-          <div class="form-btn-container">
-            <h3>Berat Badan</h3>
-            <input type="number" />
-          </div>
-          <br />
-          <div>
-            <button class="submit">Hitung BMI</button>
-            <button class="reset">Reset</button>
-          </div>
-        </form>
-        <!-- Article -->
-        <article>
-          <header>
-            <h2>Form Information</h2>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed optio
-            eaque rem magnam voluptatibus veritatis tempore. A modi dolore nemo
-            quisquam necessitatibus distinctio minima corrupti, earum quod
-            voluptatibus iure aspernatur?
-          </p>
-        </article>
-      </aside>
-      <!-- Section -->
-      <aside>
-        <section>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, quidem, ut atque voluptatum at velit dignissimos veniam omnis odit molestias fuga cupiditate quia placeat eos quaerat cumque necessitatibus consequatur incidunt!
-        </section>
-      </aside>
-    </main>
+      <section class="card card-saran" id="saranp">
+        <p class="saran"><span id="saran-hide">Saran dan peringatan</span><br> <span id="saran"></span></p>
+        <br>
+        <p class="peringatan"><span id="peringatan-hide"></span> <br> <span id="peringatan"></span></p>
+      </section>
+      
+      <section>
+        <header>
+          <h2 class="information" id="form-informasi">Form Informasi</h2>
+        </header>
+        <div class="card">
 
-    <!-- Footer -->
-    <footer>
-        <p>Made by Fatiya Labibah</p>
-    </footer>
-  </body>
+          <table class="bmi-table">
+            <tr>
+              <th>Hasil Kurang dari 18.5</th>
+              <td>Berat badan kurang</td>
+            </tr>
+            <tr>
+              <th>Hasil 18.5 - 24.9</th>
+              <td>Berat badan normal/ideal</td>
+            </tr>
+            <tr>
+              <th>Hasil 25 - 29.9</th>
+              <td>Berat badan berlebih</td>
+            </tr>
+            <tr>
+              <th>Hasil 30 ke atas</th>
+              <td>Obesitas</td>
+            </tr>
+          </table>          
+
+        </div>
+      </section>
+
+    </aside>
+  </main>
+  <!----------------- End Content ------------------>
+
+  <!------------------ Footer ----------------------->
+  <footer>
+    <div class="socials">
+        <a href="https://www.instagram.com/dambelsbru_/"> <i data-feather="instagram"></i>
+        <a href="mailto:fatiyalabibah17@gmail.com"> <i data-feather="mail"></i>
+        <a href="https://www.linkedin.com/in/fatiya-labibah-547252293/"> <i data-feather="linkedin"></i>
+        </a>
+    </div>
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#petunjuk">Petunjuk</a>
+        <a href="#hitung-bmi">Hitung BMI</a>
+        <a href="#hasil-bmi">Hasil BMI</a>
+        <a href="#saranp">Saran</a>
+        <a href="#form-informasi">Form Informasi</a>
+    </div>
+    <div class="creadit">
+        <p>Created by <a href="">Fatiya Labibah</a>
+         | &copy; 2024</p>
+    </div>
+</footer>
+
+<script>
+  feather.replace();
+</script>
+
+<!-------------------Footer end -------------------->
+</body>
+
 </html>
