@@ -88,48 +88,49 @@ form {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
-button {
-    height: 32px;
+.btn{
     border-radius: 15px;
     width: 50%;
     height: 40px;
     font-size: 15px;
     text-transform: uppercase;
     margin: 10px;
+    text-decoration: none;
 }
 
-.hitung {
+
+#hitung {
     color: #ffffff;
     background-color: hsl(261, 52%, 35%);
     border: #cdcad7 1px solid;
 }
 
-.hitung:hover {
+#hitung:hover {
     background-color: #634aa8;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-3px);
 }
 
-.hitung:active {
+#hitung:active {
     background-color: hsl(261, 52%, 35%);
     transform: translateY(5px);
     transition:  transform 0.1s ease-in-out, box-shadow 0.1s ease, background-color 0.3s ease;
     box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
 }
 
-.reset {
+#reset {
     background-color: rgb(143, 20, 20);
     color: white;
     border: #cdcad7 1px solid;
 } 
 
-.reset:hover {
+#reset:hover {
     background-color: rgb(159, 38, 38);
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-3px);
 }
 
-.reset:active {
+#reset:active {
     background-color: rgb(213, 54, 54);
     color: hsl(0, 0%, 100%);
     transform: translateY(5px);
@@ -185,6 +186,13 @@ select option {
     font-size: 16px;
     text-align: left;
     background-color: #ccc;
+}
+
+.bmi-table .judul {
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: #928DAB;
 }
 
 .bmi-table th,
@@ -357,11 +365,11 @@ footer .creadit a {
         width: auto;
     }
 
-    .hitung {
+    #hitung {
         width: 100%;
     }
 
-    .reset {
+    #reset {
         width: 100%;
         margin-top: 13px;
     }
@@ -374,7 +382,7 @@ footer .creadit a {
         margin-left: 28px;
         margin-right: 28px;
         border-radius: 7px;
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .card .span-p{

@@ -80,9 +80,10 @@
         </div>
         <br />
         <div class="button">
-          <button class="hitung" type="button" onclick="hitungBMI()">SUBMIT</button>
-          <button class="reset" id="reset" onclick="resetForm()">Reset</button>
-        </div>
+          <button class="btn" id="hitung" type="button" onclick="hitungBMI()">SUBMIT</button>
+          <button id="reset" class="btn" onclick="resetForm()">Reset</button>
+      </div>
+      
       </form>
       <!----------------- End Form BMI ------------------>
 
@@ -117,6 +118,10 @@
         <div class="card">
 
           <table class="bmi-table">
+            <tr>
+              <th class="judul">HASIL BMI</th>
+              <th class="judul">KETERANGAN</th>
+            </tr>
             <tr>
               <th>Hasil > 18.5</th>
               <td>Berat badan kurang</td>

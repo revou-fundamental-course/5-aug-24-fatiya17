@@ -54,6 +54,7 @@ function hitungBMI() {
     document.getElementById('bmi-gender').textContent = 'Jenis kelamin : ' + jeniskelamin
     document.getElementById('saran-hide').textContent = saranD
     document.getElementById('peringatan-hide').textContent = peringatanD
+    document.getElementById('hasil-bmi').scrollIntoView({ behavior: 'smooth' });
 }
 
 
