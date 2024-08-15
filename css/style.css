@@ -45,7 +45,7 @@ aside.kiri, aside.kanan {
     padding: 30px;
     margin: 0;
     margin-left: 0;
-    
+    text-align: justify;
 }
 
 aside.kiri .card, aside.kanan .card{
@@ -181,7 +181,7 @@ select option {
     border-radius: 30px;
     border-collapse: collapse;
     margin: 20px 0;
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
     background-color: #ccc;
 }
@@ -209,13 +209,13 @@ select option {
 .information {
     margin: 20px;
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .hasil h2 {
     color: #ffffff;
     margin: 20px;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .card-hasil {
@@ -307,13 +307,14 @@ footer .links {
 }
 footer .links a {
     color: #fff;
-    padding: 0.7rem 1rem;
+    padding: 0.4rem;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
+    
 }
 
 footer .creadit {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     color: rgb(178, 153, 180);
 }
 
@@ -364,4 +365,27 @@ footer .creadit a {
         margin-top: 13px;
     }
 
+}
+
+@media only screen and (max-width:500px) {
+    .main-title {
+        margin: 10px;
+    }
+
+    .card .span-p{
+        font-size: 20px;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    aside.kiri .card, aside.kanan .card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    form {
+        margin: 0;
+    }
 }
