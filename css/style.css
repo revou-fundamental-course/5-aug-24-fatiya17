@@ -352,6 +352,7 @@ footer .creadit a {
         justify-content: space-evenly;
         flex-wrap: non-wrap;
         flex-direction: column;
+        margin-right: 20px;
     }
 
     .bmi-table th, .bmi-table td {
